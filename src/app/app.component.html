@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silvio Suchy</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="icon" type="image/x-icon" href="../assets/img/trylast.png">
+  <meta name="description" content="Friendly neighbourhood developer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="../app/app.component.css"> 
+</head>
+
+<body>
+  <div class="preloader" *ngIf="isLoading">
+    <div class="loader">
+      <span style="--i:1;"></span>
+      <span style="--i:2;"></span>
+      <span style="--i:3;"></span>
+      <span style="--i:4;"></span>
+      <span style="--i:5;"></span>
+      <span style="--i:6;"></span>
+      <span style="--i:7;"></span>
+      <span style="--i:8;"></span>
+      <span style="--i:9;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+    </div>
+    <h3><img class="preload-logo" src="../assets/img/MW letter logo design.png" alt="Preloader Logo"></h3>
+  </div>
+  <main class="maain" *ngIf="!isLoading">
+    <!-- Header and nav menu -->
+    <header class="header">
+      <a href="#home" class="dark-logo"><img class="main-logo" src="../assets/img/trylast.png" alt="Dark Logo" width="50" height="50"></a>
+      <a href="#home" class="logo hideme"><img class="main-logo" src="../assets/img/trylast.png" alt="Logo"></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navmenulist">
+        <li><a href="#about"><span>01.</span>About</a></li>
+        <li><a href="#skills"><span>02.</span>Skills</a></li>
+        <li><a href="#projects"><span>03.</span>Projects</a></li>
+        <li><a href="#experience"><span>04.</span>Experience</a></li>
+      </ul>
+      <div class="button-together">
+        <a href="#" class="top-btn">
+          <button type="button" class="dark-mode-button" (click)="toggleDarkMode()" title="Toggle Dark Mode">
+            <i [class]='isDarkMode ? "bx bxs-sun" : "bx bxs-moon"'></i>
+          </button>
+        </a>
+        <a href="../assets/SilvioSuchy.pdf" target="_blank" class="resume-button" rel="noopener noreferrer">Resume</a>
+      </div>
+    </header>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/silvio-suchy-4b97b8271/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin' aria-label="LinkedIn"></i></a>
+      <a href="https://github.com/SuchySilvio" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' aria-label="GitHub"></i></a>
+    </div>
+    <div class="mail">
+      <a href="mailto:suchysilvio&#64;gmail.com">suchysilvio&#64;gmail.com</a>
+    </div>
+    <!--------Home and profile---->
+    <section class="home" id="home">
+      <div class="home-text">
+        <div class="typein" #typeinElement></div>
+        <h1 class="ee">SILVIO SUCHY</h1>
+        <h5 class="twoo">A Full Stack <span>Web Developer</span></h5>
+        <p class="threee">I make great websites and help brands grow and <br> expand their business online.</p>
+        <div class="social-2">
+          <a href="https://www.linkedin.com/in/silvio-suchy-4b97b8271/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin' aria-label="LinkedIn"></i></a>
+          <a href="https://github.com/SuchySilvio" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' aria-label="GitHub"></i></a>
+          <a href="mailto:suchysilvio&#64;gmail.com"><i class='bx bxl-gmail' aria-label="Email"></i></a>
+        </div><br>
+        <p class="color-trick"> <br></p>
+        <a href="#about" class="fiveee2">Let's Begin</a>
+      </div>
+    </section>
+
+    <!------ About Me---->
+    <section class="about" id="about">
+      <div class="about-text div-intro">
+        <h3>I'm a Developer</h3>
+        <h2>I Can Turn Exciting Ideas Into Reality</h2>
+        <p>As a software developer, I am passionate about using my technical skills and
+          knowledge to create innovative and useful applications. I have experience in a
+          wide range of programming languages and development environments. My portfolio
+          showcases a selection of my past projects and highlights my technical abilities
+          and problem-solving skills.</p>
+      </div>
+      <div class="about-img">
+        <img src="../assets/img/trylast.png" alt="Profile Image">
+      </div>
+    </section>
+
+    <!--------Skills ---->
+    <section class="sub-service" id="skills">
+      <div class="heading">
+        <h3>Skills</h3>
+        <h2>My Coding Skills</h2>
+      </div>
+      <div class="expertise">
+        <div class="items">
+          <div class="sub-box">
+            <h1><span>FrontEnd</span> development</h1>
+            <p>With experience in using a variety of <span>technologies</span>, including HTML, CSS, JavaScript, and
+              <span>frameworks</span> such as React or Angular, to build <span>responsive</span> and <span>interactive
+                interfaces</span> that run smoothly on a variety of devices
+            </p>
+          </div>
+          <div class="sub-box">
+            <h1><span>Backend</span> development</h1>
+            <p>Mainly responsible for designing and implementing the <span>server-side</span> of web and mobile
+              applications, using expertise in both Node.js and Java to build <span>efficient</span> and <span>scalable
+                backend</span> systems</p>
+          </div>
+          <div class="sub-box">
+            <h1><span>Database</span> skillet</h1>
+            <p>I have a strong understanding of database design principles and ability to work with a variety of
+              <span>database management</span> systems, such as MySQL, MongoDB, and SQL Server.
+            </p>
+          </div>
+        </div>
+        <div class="sub-box langtool">
+          <h1><span>Languages</span> and tools</h1>
+          <br>
+          <div #skillSphere class="skill-sphere"></div>
+          <div #skillSphereMobile class="skill-sphere-mobile"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-------- Projects ---->
+    <section class="portfolio" id="projects">
+      <div class="heading">
+        <h3>Projects</h3>
+        <h2>Some Things I Have Built</h2>
+      </div>
+      <div class="main-project">
+        <div class="featured">
+          <div class="ribbon ribbon-top-right"><img src="../assets/img/Final Featured Project.png" alt="Featured Ribbon"></div>
+          <div class="feat-desc">
+            <span class="feat-title">Novella</span> Our online necklace store will offer a curated collection of exquisite necklaces, providing customers
+            with a convenient and sophisticated shopping experience. Through our user-friendly platform, we
+            will help users access and purchase their desired necklaces, offering a diverse range of styles and
+            designs to cater to various tastes and occasions.
+          </div>
+          <br>
+          <div class="featured-proj blackvid">
+            <video src="../assets/mp4/Novella.mp4" type="video/mp4" playsinline autoplay muted loop></video>
+          </div>
+          <div class="action-buttons">
+            <a href="https://novella20240408185248.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+              <h5 class="novellabutton"><button class="visit" type="button">Visit site</button></h5>
+            </a>
+          </div>
+        </div>
+
+        <div class="other-ptojects">
+          <span>
+            <h1>All Projects</h1>
+          </span>
+          <div class="project-grid">
+            <div class="project-entry">
+              <div class="projectimage">
+                <img class="project-img" src="../assets/img/kickcopy.png" alt="Project Image">
+              </div>
+              <div class="project-description">
+                <div class="project-tital">
+                  <h2 class="">MovieApp API, Theme Kick.com</h2>
+                </div>
+                <div class="project-text">
+                  <p>MovieApp API is a movie database that provides information about movies, TV shows, and actors.
+                    Theme Kick.com is a website that allows users to browse and download free WordPress themes.</p>
+                  <ul>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>JavaScript</li>
+                    <li>API</li>
+                  </ul>
+                  <div class="action-buttons">
+                    <a href="https://gentle-mermaid-1e3729.netlify.app/" target="_blank" rel="noopener noreferrer">
+                      <h5><button class="visit" type="button">Visit site</button></h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-entry">
+              <div class="project-description">
+                <div class="project-tital">
+                  <h2 class="">TypingJackpot</h2>
+                </div>
+                <div class="project-text">
+                  <p>Immerse yourself in a typing race game that dynamically measures and showcases your typing speed in words per minute,
+                    offering an engaging and competitive way to enhance your typing skills.</p>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <div class="action-buttons">
+                    <a href="https://stirring-marshmallow-50bd1d.netlify.app/" target="_blank" rel="noopener noreferrer">
+                      <h5><button class="visit" type="button">Visit site</button></h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="projectimage">
+                <img class="project-img" src="../assets/img/gamerace.png" alt="Project Image">
+              </div>
+            </div>
+
+            <div class="project-entry">
+              <div class="projectimage">
+                <img class="project-img" src="../assets/img/foxnews22.png" alt="Project Image">
+              </div>
+              <div class="project-description">
+                <div class="project-tital">
+                  <h2 class="">FOX NEWS</h2>
+                </div>
+                <div class="project-text">
+                  <p>This project is a meticulous recreation of the Fox News layout, utilizing SCSS for its styling.
+                    It showcases advanced techniques in modern web design, emphasizing responsiveness and aesthetic fidelity.</p>
+                  <ul>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <div class="action-buttons">
+                    <a href="https://effulgent-kelpie-b819aa.netlify.app/" target="_blank" rel="noopener noreferrer">
+                      <h5><button class="visit" type="button">Visit site</button></h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------experience---->
+    <section class="service" id="experience">
+      <div class="heading tiltheading">
+        <h3>Experience</h3>
+        <h2>Work Roles & Responsibilities</h2>
+      </div>
+      <div class="service-content">
+        <div class="row">
+          <div class="s s-one">
+            <img src="../assets/img/jobsimg.png" alt="Job Image">
+          </div>
+          <div class="job-description">
+            <h3><span>Senior Software Engineer</span></h3>
+            <h5>Example <br> <span>Feb 2021 - Oct 2021</span></h5>
+            <p>Key Responsibilities: <br>- Worked primarily on the migration preparation for a complaint logging
+              software <br>- Trained new hires and helped them work efficiently and effectively on the project.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="s s-two">
+            <img src="../assets/img/jobimg2.png" alt="Job Image">
+          </div>
+          <div class="job-description">
+            <h3><span>Software Engineer</span></h3>
+            <h5>Example <br><span>Aug 2018 - Jan 2021</span></h5>
+            <p>Key Responsibilities: <br>- Worked on the development of software for a French Telecom firm <br>-
+              Handled various new requirements and worked on front-end and backend of the application.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------ends---->
+    <footer>
+      <div class="ends">
+        <p>Designed, Developed & Maintained by Silvio Suchy © 2024</p>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
