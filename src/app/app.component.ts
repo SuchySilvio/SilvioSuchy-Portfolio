@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Renderer2, ChangeDetectorRef  } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Renderer2, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Swiper from 'swiper';
 import 'swiper/css';
@@ -11,7 +11,6 @@ declare var TagCloud: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  //css in angular.json global styles
   imports: [CommonModule],
   standalone: true,
 })
@@ -19,22 +18,19 @@ export class AppComponent implements OnInit, AfterViewInit {
   isLoading: boolean = true;
   isDarkMode: boolean = false; // Initial state of dark mode
 
-
   // Added ViewChild for typeinElement
   @ViewChild('typeinElement') typeinElement!: ElementRef;
   @ViewChild('skillSphere') skillSphere!: ElementRef;
   @ViewChild('skillSphereMobile') skillSphereMobile!: ElementRef;
-
-  
+  @ViewChild('novellaVideo') novellaVideo!: ElementRef;
+  @ViewChild('fullscreenBtn') fullscreenBtn!: ElementRef;
 
   constructor(private renderer: Renderer2, private cdr: ChangeDetectorRef) {}
 
-  
   ngOnInit(): void {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-      // Ensure change detection runs to update the view before initializing.
       this.cdr.detectChanges();
       this.initializeTyped();
       this.initializeTagCloud();
@@ -42,11 +38,11 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.applyTheme();
     }, 3000); // Adjust time as needed based on your loading logic
   }
-  
 
   ngAfterViewInit(): void {
     this.initializeTyped();
     this.loadTagCloudScript();
+    this.fullScreenInit(); // Initialize fullscreen logic after view init
   }
 
   toggleDarkMode(): void {
@@ -115,5 +111,28 @@ export class AppComponent implements OnInit, AfterViewInit {
       TagCloud(this.skillSphere.nativeElement, Skillset, { radius: 300 });
       TagCloud(this.skillSphereMobile.nativeElement, Skillset, { radius: 200 });
     }
+  }
+
+  fullScreenInit(): void {
+    const videoElement = this.novellaVideo.nativeElement;
+    const fullscreenBtn = this.fullscreenBtn.nativeElement;
+
+    fullscreenBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        if (videoElement.requestFullscreen) {
+          videoElement.requestFullscreen();
+        } else if (videoElement.mozRequestFullScreen) { // Firefox
+          videoElement.mozRequestFullScreen();
+        } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+          videoElement.webkitRequestFullscreen();
+        } else if (videoElement.msRequestFullscreen) { // IE/Edge
+          videoElement.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
   }
 }

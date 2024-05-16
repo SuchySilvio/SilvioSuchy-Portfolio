@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <link rel="stylesheet" href="../app/app.component.css"> 
+  <link rel="stylesheet" href="../app/app.component.css">
 </head>
-
 <body>
   <div class="preloader" *ngIf="isLoading">
     <div class="loader">
@@ -35,12 +33,10 @@
     <h3><img class="preload-logo" src="../assets/img/MW letter logo design.png" alt="Preloader Logo"></h3>
   </div>
   <main class="maain" *ngIf="!isLoading">
-    <!-- Header and nav menu -->
     <header class="header">
       <a href="#home" class="dark-logo"><img class="main-logo" src="../assets/img/trylast.png" alt="Dark Logo" width="50" height="50"></a>
       <a href="#home" class="logo hideme"><img class="main-logo" src="../assets/img/trylast.png" alt="Logo"></a>
       <div class="bx bx-menu" id="menu-icon"></div>
-
       <ul class="navmenulist">
         <li><a href="#about"><span>01.</span>About</a></li>
         <li><a href="#skills"><span>02.</span>Skills</a></li>
@@ -63,7 +59,6 @@
     <div class="mail">
       <a href="mailto:suchysilvio&#64;gmail.com">suchysilvio&#64;gmail.com</a>
     </div>
-    <!--------Home and profile---->
     <section class="home" id="home">
       <div class="home-text">
         <div class="typein" #typeinElement></div>
@@ -80,7 +75,6 @@
       </div>
     </section>
 
-    <!------ About Me---->
     <section class="about" id="about">
       <div class="about-text div-intro">
         <h3>I'm a Developer</h3>
@@ -96,7 +90,6 @@
       </div>
     </section>
 
-    <!--------Skills ---->
     <section class="sub-service" id="skills">
       <div class="heading">
         <h3>Skills</h3>
@@ -133,7 +126,6 @@
       </div>
     </section>
 
-    <!-------- Projects ---->
     <section class="portfolio" id="projects">
       <div class="heading">
         <h3>Projects</h3>
@@ -150,7 +142,15 @@
           </div>
           <br>
           <div class="featured-proj blackvid">
-            <video src="../assets/mp4/Novella.mp4" type="video/mp4" playsinline autoplay muted loop></video>
+            <div class="video-container">
+              <video id="novellaVideo" src="../assets/mp4/Novella.mp4" type="video/mp4" playsinline autoplay muted loop></video>
+            </div>
+            <ul>
+              <li>HTML</li>
+              <li>SCSS</li>
+              <li>JavaScript</li>
+              <li>API</li>
+            </ul>
           </div>
           <div class="action-buttons">
             <a href="https://novella20240408185248.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
@@ -244,7 +244,6 @@
       </div>
     </section>
 
-    <!--------experience---->
     <section class="service" id="experience">
       <div class="heading tiltheading">
         <h3>Experience</h3>
@@ -262,7 +261,6 @@
               software <br>- Trained new hires and helped them work efficiently and effectively on the project.</p>
           </div>
         </div>
-
         <div class="row">
           <div class="s s-two">
             <img src="../assets/img/jobimg2.png" alt="Job Image">
@@ -278,7 +276,6 @@
       </div>
     </section>
 
-    <!--------ends---->
     <footer>
       <div class="ends">
         <p>Designed, Developed & Maintained by Silvio Suchy © 2024</p>
@@ -286,5 +283,4 @@
     </footer>
   </main>
 </body>
-
 </html>
