@@ -1631,6 +1631,13 @@ form input[type="textarea"] {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+
+
+  li {
+    font-size: 0.8rem;
+  
+  }
+
 }
 
 /* Ensure the ul lists in the project description are responsive */
