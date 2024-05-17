@@ -42,7 +42,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.initializeTyped();
     this.loadTagCloudScript();
-    this.fullScreenInit(); // Initialize fullscreen logic after view init
+    this.initializeSwiper();
   }
 
   toggleDarkMode(): void {
@@ -108,31 +108,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   initializeTagCloud(): void {
     if (this.skillSphere && this.skillSphereMobile) {
       const Skillset = ['HTML', 'CSS', 'JavaScript', 'Angular', 'React', 'Node.js', 'Express', 'MongoDB'];
-      TagCloud(this.skillSphere.nativeElement, Skillset, { radius: 300 });
-      TagCloud(this.skillSphereMobile.nativeElement, Skillset, { radius: 200 });
+      TagCloud(this.skillSphere.nativeElement, Skillset, { radius: 250 });
+      TagCloud(this.skillSphereMobile.nativeElement, Skillset, { radius: 150 });
     }
   }
 
-  fullScreenInit(): void {
-    const videoElement = this.novellaVideo.nativeElement;
-    const fullscreenBtn = this.fullscreenBtn.nativeElement;
-
-    fullscreenBtn.addEventListener('click', () => {
-      if (!document.fullscreenElement) {
-        if (videoElement.requestFullscreen) {
-          videoElement.requestFullscreen();
-        } else if (videoElement.mozRequestFullScreen) { // Firefox
-          videoElement.mozRequestFullScreen();
-        } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-          videoElement.webkitRequestFullscreen();
-        } else if (videoElement.msRequestFullscreen) { // IE/Edge
-          videoElement.msRequestFullscreen();
-        }
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        }
-      }
-    });
-  }
+ 
 }
