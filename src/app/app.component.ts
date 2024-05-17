@@ -107,7 +107,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   initializeTagCloud(): void {
     if (this.skillSphere && this.skillSphereMobile) {
-      const Skillset = ['HTML', 'CSS', 'JavaScript', 'Angular', 'React', 'Node.js', 'Express', 'MongoDB'];
+      const Skillset = ['HTML', 'CSS', 'SCSS', 'Docker','JavaScript', 'AWS' ,'TypeScript', 'SQL Server', 'FluentMigrator ', 'C#', 'Angular', 'React', 'Node.js', 'MongoDB', 'PostgreSQL'];
       TagCloud(this.skillSphere.nativeElement, Skillset, { radius: 250 });
       TagCloud(this.skillSphereMobile.nativeElement, Skillset, { radius: 150 });
     }

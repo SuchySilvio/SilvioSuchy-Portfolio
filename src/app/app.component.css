@@ -959,6 +959,14 @@ svg {
   color: white;
 }
 
+.project-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 1px 0px 7px 0px rgba(67, 67, 67, 0.5);
+}
+
 .novellabutton {
   display: flex;
   justify-content: center;
@@ -1004,7 +1012,6 @@ video {
   border-radius: 10px;
   background-color: var(--backg-color);
   box-shadow: 1px 0px 7px 0px rgba(67, 67, 67, 0.5);
-  padding: 2rem;
 }
 
 .feat-title {
@@ -1064,6 +1071,14 @@ video {
   border-radius: 12px;
 }
 
+/* Ensuring video responsiveness */
+.projectimage video {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .project-tital {
   background-color: var(--main-color);
   color: white;
@@ -1087,7 +1102,6 @@ video {
 
 
 .feat-desc {
-  margin-top: 5rem;
   margin-left: 8rem;
   padding-right: 1rem;
   padding-top: 1rem;
@@ -1125,11 +1139,7 @@ video {
   margin-bottom: 2rem;
 }
 
-.projectimage {
-  padding: 1rem;
-  border: 1px solid #a09dab;
-  border-radius: 10px;
-}
+
 
 
 
@@ -1394,9 +1404,11 @@ form input[type="textarea"] {
   }
 
   .project-entry {
-    display: flex;
-    flex-flow: column-reverse;
+    flex-direction: column-reverse;
     grid-gap: 0;
+  }
+  .project-entry:nth-of-type(even) {
+    flex-direction: column;
   }
 
   .project-entry:nth-of-type(even) {
@@ -1579,7 +1591,6 @@ form input[type="textarea"] {
   .project-entry {
     flex-direction: column;
     padding-bottom: 6rem;
-    margin-bottom: 1rem;
   }
   #experience{
     padding-top: 10rem;
@@ -1614,6 +1625,10 @@ form input[type="textarea"] {
     border-radius: 12px 12px 0 0;
   }
 
+  .projectimage video {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
   .project-description {
     border-radius: 0 0 12px 12px;
   }
