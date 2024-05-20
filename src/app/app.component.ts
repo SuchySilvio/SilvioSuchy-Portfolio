@@ -10,7 +10,7 @@ declare var TagCloud: any;
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: '../app/app.component.html',
   imports: [CommonModule],
   standalone: true,
 })

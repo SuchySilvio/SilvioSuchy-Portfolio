@@ -1,0 +1,9 @@
+[build]
+  base = ""
+  publish = "dist/browser"
+  command = "ng build --configuration production --base-href /"
+
+[[redirects]]
+  from = "/dist/browser"
+  to = "/index.html"
+  status = 200
